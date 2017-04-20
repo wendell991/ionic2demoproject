@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons start>
+      <button ion-button icon-only (click)="AddProject()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>
+      Projects
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="logout()">
+        <ion-icon name="log-out"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content class="home" padding>
+  <h3>Welcome inside!</h3>
+  Your Email is: {{email}}
+  
+  <h3>Your Projects</h3>
+  <ion-list>
+    <button ion-item *ngFor="let item of items">
+      {{ item }}
+    </button>
+	<i ion-item *ngIf="items.length == 0">No projects yet</i>
+  </ion-list>
+</ion-content>

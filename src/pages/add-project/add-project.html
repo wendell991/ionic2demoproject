@@ -1,0 +1,31 @@
+<!--
+  Generated template for the AddProjectPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons start>
+      <button ion-button icon-only ion-chevron-left (click)="CancelAdd()">
+        <ion-icon name="left">Cancel</ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>
+      Add Project
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+	<form (ngSubmit)="addItem()" #registerForm="ngForm">
+		<ion-list>
+		  <li class="item item-input item-stacked-label">
+			<span class="input-label">Name</span>
+			<input type="text" placeholder="" name="projectName" [(ngModel)]="projectName" required />					
+		  </li>
+			<button ion-button class="submit-btn"  full type="submit" >Add</button>
+		</ion-list>
+	</form>
+</ion-content>
